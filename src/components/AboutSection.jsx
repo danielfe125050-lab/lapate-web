@@ -25,7 +25,7 @@ const AboutSection = () => {
                 {/* Text Content */}
                 <div className="w-full md:w-1/2 text-center md:text-left">
                     <ScrollReveal animation="slide-in-right" delay={200}>
-                        <h2 className="text-5xl md:text-7xl font-marker uppercase mb-6 transform rotate-1 drop-shadow-[4px_4px_0px_#fff]">
+                        <h2 className="text-5xl md:text-7xl font-display md:font-marker uppercase mb-6 transform rotate-1 drop-shadow-[4px_4px_0px_#fff]">
                             ¿QUIÉN ES <br />
                             <span className="text-white text-shadow-hard">LA PATE?</span>
                         </h2>
