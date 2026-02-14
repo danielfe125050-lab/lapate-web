@@ -264,13 +264,13 @@ const MenuGrid = () => {
             <img
                 src="/ilustracion2.png"
                 alt="Mascota comiendo"
-                className={`absolute bottom-10 -left-20 w-96 md:w-[700px] transform rotate-12 transition-opacity duration-500 pointer-events-none z-20 ${activeCategory === 'platos' || activeCategory === 'adiciones' ? 'opacity-100' : 'opacity-0'}`}
+                className={`hidden md:block absolute bottom-10 -left-20 w-96 md:w-[700px] transform rotate-12 transition-opacity duration-500 pointer-events-none z-20 ${activeCategory === 'platos' || activeCategory === 'adiciones' ? 'opacity-100' : 'opacity-0'}`}
             />
 
             <img
                 src="/Illustracion1.png"
                 alt="Mascota disfrazada"
-                className={`absolute top-20 -right-20 w-80 md:w-[600px] transform -rotate-12 transition-opacity duration-500 pointer-events-none z-20 ${activeCategory === 'entradas' || activeCategory === 'postres' ? 'opacity-100' : 'opacity-0'}`}
+                className={`hidden md:block absolute top-20 -right-20 w-80 md:w-[600px] transform -rotate-12 transition-opacity duration-500 pointer-events-none z-20 ${activeCategory === 'entradas' || activeCategory === 'postres' ? 'opacity-100' : 'opacity-0'}`}
             />
 
             <div className="absolute top-20 left-0 w-32 h-32 bg-brand-green rounded-full blur-3xl opacity-50 mix-blend-multiply"></div>
