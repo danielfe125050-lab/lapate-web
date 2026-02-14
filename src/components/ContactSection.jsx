@@ -8,7 +8,7 @@ const ContactSection = () => {
             <div className="max-w-4xl mx-auto relative z-10 text-center">
 
                 <ScrollReveal animation="rotate-pop">
-                    <h2 className="text-6xl md:text-8xl font-marker uppercase transform rotate-2 mb-12 text-shadow-hard text-brand-yellow drop-shadow-[4px_4px_0px_#fff]">
+                    <h2 className="text-6xl md:text-8xl font-display md:font-marker uppercase transform rotate-2 mb-12 text-shadow-hard text-brand-yellow drop-shadow-[4px_4px_0px_#fff]">
                         ¿DÓNDE ESTAMOS?
                     </h2>
                 </ScrollReveal>

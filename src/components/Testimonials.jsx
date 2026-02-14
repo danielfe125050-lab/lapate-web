@@ -39,7 +39,7 @@ const Testimonials = () => {
 
             <div className="container mx-auto px-4 relative z-10">
                 <ScrollReveal animation="fade-up">
-                    <h2 className="text-5xl md:text-7xl font-marker text-center uppercase mb-16 transform -rotate-2 drop-shadow-[4px_4px_0px_#fff]">
+                    <h2 className="text-5xl md:text-7xl font-display md:font-marker text-center uppercase mb-16 transform -rotate-2 drop-shadow-[4px_4px_0px_#fff]">
                         LO QUE DICE LA BANDA 🗣️
                     </h2>
                 </ScrollReveal>

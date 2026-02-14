@@ -181,7 +181,7 @@ const MenuGrid = () => {
 
             {/* Section Header */}
             <div className="text-center mb-12 relative z-10">
-                <h2 className="text-6xl md:text-8xl font-marker uppercase transform -rotate-3 text-brand-black drop-shadow-[5px_5px_0px_#fff]">
+                <h2 className="text-6xl md:text-8xl font-display md:font-marker uppercase transform -rotate-3 text-brand-black drop-shadow-[5px_5px_0px_#fff]">
                     EL MENÚ
                 </h2>
             </div>
