@@ -188,8 +188,13 @@ const MenuGrid = () => {
             }
         ],
         adiciones: [
-            { id: 17, name: "TOCINETA", price: "$ 4.000", description: "Porción extra de tocino", tag: null },
-            { id: 18, name: "QUESO", price: "$ 3.000", description: "Doble porción de queso mozzarella", tag: null }
+            { id: 33, name: "CHORIZO", price: "$ 7.000", description: "Porción de chorizo La Pate", tag: null },
+            { id: 34, name: "PAPAS", price: "$ 6.000", description: "Porción de papas a la francesa", tag: null },
+            { id: 35, name: "QUESO", price: "$ 3.000", description: "Adición de queso mozzarella", tag: null },
+            { id: 36, name: "ADICIÓN BOND DULCE", price: "$ 7.000", description: "Salsa dulce especial", tag: null },
+            { id: 37, name: "CARNE BURGER", price: "$ 7.000", description: "Carne de res 180g", tag: null },
+            { id: 38, name: "CARNE PAPATE", price: "$ 7.000", description: "Carne desmechada / caramelizada", tag: null },
+            { id: 39, name: "BALSÁMICO", price: "$ 1.500", description: "Reducción de balsámico", tag: null },
         ]
     };
 
@@ -232,22 +237,24 @@ const MenuGrid = () => {
                                 </div>
                             )}
 
-                            {/* Image */}
-                            <div className="w-full aspect-[4/3] bg-brand-black/5 border-2 border-black flex items-center justify-center overflow-hidden relative mb-6 group-hover:rotate-1 transition-transform">
-                                {item.image ? (
-                                    <img
-                                        src={item.image}
-                                        alt={item.name}
-                                        className={`w-full h-full transform hover:scale-110 transition-transform duration-500 
-                                            ${activeCategory === 'bebidas'
-                                                ? ([27, 28, 29, 30, 31, 32].includes(item.id) ? 'object-cover scale-[1.8]' : 'object-contain p-4')
-                                                : 'object-cover'
-                                            }`}
-                                    />
-                                ) : (
-                                    <span className="text-5xl">🌭</span>
-                                )}
-                            </div>
+                            {/* Image - Hidden for Adiciones */}
+                            {activeCategory !== 'adiciones' && (
+                                <div className="w-full aspect-[4/3] bg-brand-black/5 border-2 border-black flex items-center justify-center overflow-hidden relative mb-6 group-hover:rotate-1 transition-transform">
+                                    {item.image ? (
+                                        <img
+                                            src={item.image}
+                                            alt={item.name}
+                                            className={`w-full h-full transform hover:scale-110 transition-transform duration-500 
+                                                ${activeCategory === 'bebidas'
+                                                    ? ([27, 28, 29, 30, 31, 32].includes(item.id) ? 'object-cover scale-[1.8]' : 'object-contain p-4')
+                                                    : 'object-cover'
+                                                }`}
+                                        />
+                                    ) : (
+                                        <span className="text-5xl">🌭</span>
+                                    )}
+                                </div>
+                            )}
 
                             {/* Content */}
                             <div className="flex-1 flex flex-col text-left w-full">
