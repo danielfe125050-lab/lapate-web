@@ -165,17 +165,17 @@ const MenuGrid = () => {
             { id: 23, name: "JUGO NATURAL", price: "$ 8.000", description: "En agua o en leche: Mora, Fresa, Mango, Lulo", tag: "NATURAL", image: "/jugo.jpeg" },
 
             // Cervezas
-            { id: 24, name: "CORONA", price: "$ 9.000", description: "Cerveza importada", tag: null, image: null },
-            { id: 25, name: "STELLA ARTOIS", price: "$ 8.000", description: "Cerveza importada", tag: null, image: null },
-            { id: 26, name: "CLUB COLOMBIA", price: "$ 7.000", description: "Dorada, Roja o Negra", tag: null, image: null },
+            { id: 24, name: "CORONA", price: "$ 9.000", description: "Cerveza importada", tag: null, image: "/Corona.webp" },
+            { id: 25, name: "STELLA ARTOIS", price: "$ 8.000", description: "Cerveza importada", tag: null, image: "/STELLA ARTOIS.webp" },
+            { id: 26, name: "CLUB COLOMBIA", price: "$ 7.000", description: "Dorada, Roja o Negra", tag: null, image: "/CLUB COLOMBIA.png" },
 
             // Gaseosas y Aguas
-            { id: 27, name: "SODA HATSU", price: "$ 6.000", description: "Sodas saborizadas Hatsu", tag: null, image: null },
-            { id: 28, name: "COCA-COLA", price: "$ 5.500", description: "Original o Zero", tag: null, image: null },
-            { id: 29, name: "QUATRO", price: "$ 5.500", description: "Gaseosa sabor toronja", tag: null, image: null },
-            { id: 30, name: "PREMIO", price: "$ 5.500", description: "Gaseosa roja", tag: null, image: null },
-            { id: 31, name: "BRISA SABORIZADA", price: "$ 5.500", description: "Agua con gas saborizada", tag: null, image: null },
-            { id: 32, name: "SODA", price: "$ 5.000", description: "Agua con gas", tag: null, image: null },
+            { id: 27, name: "SODA HATSU", price: "$ 6.000", description: "Sodas saborizadas Hatsu", tag: null, image: "/SODA HATSU.webp" },
+            { id: 28, name: "COCA-COLA", price: "$ 5.500", description: "Original o Zero", tag: null, image: "/COCA-COLA.png" },
+            { id: 29, name: "QUATRO", price: "$ 5.500", description: "Gaseosa sabor toronja", tag: null, image: "/QUATRO.webp" },
+            { id: 30, name: "PREMIO", price: "$ 5.500", description: "Gaseosa roja", tag: null, image: "/PREMIO.webp" },
+            { id: 31, name: "BRISA SABORIZADA", price: "$ 5.500", description: "Agua con gas saborizada", tag: null, image: "/BRISA SABORIZADA.jpg" },
+            { id: 32, name: "SODA", price: "$ 5.000", description: "Agua con gas", tag: null, image: "/SODA.webp" },
         ],
         postres: [
             {
