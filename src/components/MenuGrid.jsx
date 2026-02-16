@@ -238,7 +238,7 @@ const MenuGrid = () => {
                                     <img
                                         src={item.image}
                                         alt={item.name}
-                                        className={`w-full h-full transform hover:scale-110 transition-transform duration-500 ${activeCategory === 'bebidas' ? 'object-contain p-4' : 'object-cover'}`}
+                                        className={`w-full h-full transform hover:scale-110 transition-transform duration-500 ${activeCategory === 'bebidas' && ![27, 28, 29, 30, 31, 32].includes(item.id) ? 'object-contain p-4' : 'object-cover'}`}
                                     />
                                 ) : (
                                     <span className="text-5xl">🌭</span>
