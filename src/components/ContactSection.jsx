@@ -37,7 +37,7 @@ const ContactSection = () => {
                                 <a href="https://wa.me/573027703386" target="_blank" rel="noopener noreferrer" className="w-full bg-brand-green text-white font-display text-2xl uppercase py-4 text-center border-4 border-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none shadow-[8px_8px_0px_#000] transition-all">
                                     WHATSAPP
                                 </a>
-                                <a href="#" className="w-full bg-[#E1306C] text-white font-display text-2xl uppercase py-4 text-center border-4 border-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none shadow-[8px_8px_0px_#000] transition-all">
+                                <a href="https://www.instagram.com/lapate_med/" target="_blank" rel="noopener noreferrer" className="w-full bg-[#E1306C] text-white font-display text-2xl uppercase py-4 text-center border-4 border-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none shadow-[8px_8px_0px_#000] transition-all">
                                     INSTAGRAM
                                 </a>
                             </div>
