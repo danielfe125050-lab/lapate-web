@@ -240,7 +240,7 @@ const MenuGrid = () => {
                                         alt={item.name}
                                         className={`w-full h-full transform hover:scale-110 transition-transform duration-500 
                                             ${activeCategory === 'bebidas'
-                                                ? ([27, 28, 29, 30, 31, 32].includes(item.id) ? 'object-cover scale-125' : 'object-contain p-4')
+                                                ? ([27, 28, 29, 30, 31, 32].includes(item.id) ? 'object-cover scale-150' : 'object-contain p-4')
                                                 : 'object-cover'
                                             }`}
                                     />
