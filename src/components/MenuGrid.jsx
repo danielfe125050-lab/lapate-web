@@ -157,8 +157,25 @@ const MenuGrid = () => {
             }
         ],
         bebidas: [
-            { id: 14, name: "LIMONADA DE COCO", price: "$ 8.000", description: "Refrescante y cremosa", tag: null },
-            { id: 15, name: "GASEOSAS", price: "$ 5.000", description: "Coca-Cola, Postobón, Pepsi", tag: null }
+            // Cócteles y Especiales
+            { id: 19, name: "MARGARITA", price: "$ 27.000", description: "Clásica margarita con tequila, triple sec y limón", tag: "COCTEL", image: "/MARGARITA.jpeg" },
+            { id: 20, name: "TINTO DE VERANO", price: "$ 12.000", description: "Vino tinto, soda y limón", tag: "REFRESCANTE", image: "/tinto de verano.jpeg" },
+            { id: 21, name: "SODA LYCHEE", price: "$ 12.000", description: "Soda saborizada con lychees", tag: "NUEVO", image: null },
+            { id: 22, name: "SODA MICHELADA", price: "$ 8.000", description: "Soda con limón y sal", tag: null, image: null },
+            { id: 23, name: "JUGO NATURAL", price: "$ 8.000", description: "En agua o en leche: Mora, Fresa, Mango, Lulo", tag: "NATURAL", image: "/jugo.jpeg" },
+
+            // Cervezas
+            { id: 24, name: "CORONA", price: "$ 9.000", description: "Cerveza importada", tag: null, image: null },
+            { id: 25, name: "STELLA ARTOIS", price: "$ 8.000", description: "Cerveza importada", tag: null, image: null },
+            { id: 26, name: "CLUB COLOMBIA", price: "$ 7.000", description: "Dorada, Roja o Negra", tag: null, image: null },
+
+            // Gaseosas y Aguas
+            { id: 27, name: "SODA HATSU", price: "$ 6.000", description: "Sodas saborizadas Hatsu", tag: null, image: null },
+            { id: 28, name: "COCA-COLA", price: "$ 5.500", description: "Original o Zero", tag: null, image: null },
+            { id: 29, name: "QUATRO", price: "$ 5.500", description: "Gaseosa sabor toronja", tag: null, image: null },
+            { id: 30, name: "PREMIO", price: "$ 5.500", description: "Gaseosa roja", tag: null, image: null },
+            { id: 31, name: "BRISA SABORIZADA", price: "$ 5.500", description: "Agua con gas saborizada", tag: null, image: null },
+            { id: 32, name: "SODA", price: "$ 5.000", description: "Agua con gas", tag: null, image: null },
         ],
         postres: [
             {

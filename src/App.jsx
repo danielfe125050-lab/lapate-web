@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import './index.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import MenuGrid from './components/MenuGrid';
-import ContactSection from './components/ContactSection';
 import Marquee from './components/Marquee';
-import Testimonials from './components/Testimonials';
-import AboutSection from './components/AboutSection';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+
+// Lazy Load Heavy Components
+const MenuGrid = lazy(() => import('./components/MenuGrid'));
+const ContactSection = lazy(() => import('./components/ContactSection'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const AboutSection = lazy(() => import('./components/AboutSection'));
+
+// Simple Loading Spinner
+const LoadingSpinner = () => (
+  <div className="flex justify-center items-center py-20">
+    <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-brand-black"></div>
+  </div>
+);
 
 function App() {
   return (
@@ -20,7 +29,9 @@ function App() {
         <Marquee text="TIENE HAMBRE? PARCE COMA RICO NO COMA CUENTO" rotation="rotate-2" />
       </div>
 
-      <MenuGrid />
+      <Suspense fallback={<LoadingSpinner />}>
+        <MenuGrid />
+      </Suspense>
 
       {/* Visual Separator with Marquee */}
       <div className="relative z-30 -my-8">
@@ -29,15 +40,22 @@ function App() {
 
       <Marquee text="★ COMIDA CON ALMA ★ PERRO SALCHICHA ★ LA PATE ★" direction="right" color="bg-brand-black" textColor="text-brand-yellow" rotate={-1} />
 
-      <AboutSection />
+      <Suspense fallback={<LoadingSpinner />}>
+        <AboutSection />
+      </Suspense>
 
       <Marquee text="★ CLIENTES FELICES ★ SÁBADO DE PARCHE ★ LA MEJOR COMIDA ★" direction="right" color="bg-brand-red" textColor="text-white" rotate={2} />
 
-      <Testimonials />
+      <Suspense fallback={<LoadingSpinner />}>
+        <Testimonials />
+      </Suspense>
 
       <Marquee text="📍 VISÍTANOS YA 📍 VISÍTANOS YA 📍 VISÍTANOS YA 📍" direction="left" color="bg-brand-green" textColor="text-brand-black" rotate={-1} />
 
-      <ContactSection />
+      <Suspense fallback={<LoadingSpinner />}>
+        <ContactSection />
+      </Suspense>
+
       <FloatingWhatsApp />
     </div>
   )
