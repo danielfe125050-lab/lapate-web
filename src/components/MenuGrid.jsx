@@ -292,7 +292,7 @@ const MenuGrid = () => {
             <img
                 src="/ilustracion2.png"
                 alt="Mascota comiendo"
-                className={`hidden md:block absolute bottom-10 -left-20 w-96 md:w-[700px] transform rotate-12 transition-opacity duration-500 pointer-events-none z-20 ${activeCategory === 'platos' || activeCategory === 'adiciones' ? 'opacity-100' : 'opacity-0'}`}
+                className={`hidden md:block absolute bottom-0 -right-10 w-64 md:w-[450px] transform -rotate-12 transition-opacity duration-500 pointer-events-none z-0 ${activeCategory === 'platos' || activeCategory === 'adiciones' ? 'opacity-100' : 'opacity-0'}`}
             />
 
             <img
