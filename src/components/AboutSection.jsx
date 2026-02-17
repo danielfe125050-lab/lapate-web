@@ -15,6 +15,8 @@ const AboutSection = () => {
                                 <img
                                     src="/quieneslapate.jpeg"
                                     alt="Quién es La Pate"
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-auto object-cover"
                                 />
                             </div>
