@@ -160,8 +160,8 @@ const MenuGrid = () => {
             // Cócteles y Especiales
             { id: 19, name: "MARGARITA", price: "$ 27.000", description: "Clásica margarita con tequila, triple sec y limón", tag: "COCTEL", image: "/MARGARITA.jpeg" },
             { id: 20, name: "TINTO DE VERANO", price: "$ 12.000", description: "Vino tinto, soda y limón", tag: "REFRESCANTE", image: "/tinto de verano.jpeg" },
-            { id: 21, name: "SODA LYCHEE", price: "$ 12.000", description: "Soda saborizada con lychees", tag: "NUEVO", image: null },
-            { id: 22, name: "SODA MICHELADA", price: "$ 8.000", description: "Soda con limón y sal", tag: null, image: null },
+            { id: 21, name: "SODA LYCHEE", price: "$ 12.000", description: "Soda saborizada con lychees", tag: "NUEVO", image: "/soda lychee.png" },
+            { id: 22, name: "SODA MICHELADA", price: "$ 8.000", description: "Soda con limón y sal", tag: null, image: "/SODA MICHELADA.png" },
             { id: 23, name: "JUGO NATURAL", price: "$ 8.000", description: "En agua o en leche: Mora, Fresa, Mango, Lulo", tag: "NATURAL", image: "/jugo.jpeg" },
 
             // Cervezas
@@ -246,7 +246,7 @@ const MenuGrid = () => {
                                             alt={item.name}
                                             className={`w-full h-full transform hover:scale-110 transition-transform duration-500 
                                                 ${activeCategory === 'bebidas'
-                                                    ? ([27, 28, 29, 30, 31, 32].includes(item.id) ? 'object-cover scale-[1.8]' : 'object-contain p-4')
+                                                    ? ([21, 22, 27, 28, 29, 30, 31, 32].includes(item.id) ? 'object-cover scale-[1.8]' : 'object-contain p-4')
                                                     : 'object-cover'
                                                 }`}
                                         />
