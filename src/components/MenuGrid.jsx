@@ -244,6 +244,8 @@ const MenuGrid = () => {
                                         <img
                                             src={item.image}
                                             alt={item.name}
+                                            loading="lazy"
+                                            decoding="async"
                                             className={`w-full h-full transform hover:scale-110 transition-transform duration-500 
                                                 ${activeCategory === 'bebidas'
                                                     ? ([21, 22, 27, 28, 29, 30, 31, 32].includes(item.id) ? 'object-cover scale-[1.8]' : 'object-contain p-4')
@@ -292,12 +294,16 @@ const MenuGrid = () => {
             <img
                 src="/ilustracion2.png"
                 alt="Mascota comiendo"
+                loading="lazy"
+                decoding="async"
                 className={`hidden md:block absolute bottom-0 -right-10 w-64 md:w-[450px] transform -rotate-12 transition-opacity duration-500 pointer-events-none z-0 ${activeCategory === 'platos' || activeCategory === 'adiciones' ? 'opacity-100' : 'opacity-0'}`}
             />
 
             <img
                 src="/Illustracion1.png"
                 alt="Mascota disfrazada"
+                loading="lazy"
+                decoding="async"
                 className={`hidden md:block absolute top-20 -right-20 w-80 md:w-[600px] transform -rotate-12 transition-opacity duration-500 pointer-events-none z-20 ${activeCategory === 'entradas' || activeCategory === 'postres' ? 'opacity-100' : 'opacity-0'}`}
             />
 

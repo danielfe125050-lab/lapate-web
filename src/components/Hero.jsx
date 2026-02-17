@@ -46,6 +46,8 @@ const Hero = () => {
                     <img
                         src="/Illustracion1.png"
                         alt="Perrito curioso"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-auto drop-shadow-2xl"
                     />
                 </div>
