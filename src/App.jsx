@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import { CartProvider } from './context/CartContext';
+import Cart from './components/Cart';
 
 // Lazy Load Heavy Components
 const MenuGrid = lazy(() => import('./components/MenuGrid'));
@@ -17,9 +19,6 @@ const LoadingSpinner = () => (
     <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-brand-black"></div>
   </div>
 );
-
-import { CartProvider } from './context/CartContext';
-import Cart from './components/Cart';
 
 function App() {
   return (
@@ -63,7 +62,8 @@ function App() {
 
         <FloatingWhatsApp />
       </div>
-      )
+    </CartProvider>
+  );
 }
 
-      export default App
+export default App;
