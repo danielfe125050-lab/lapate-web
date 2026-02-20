@@ -14,7 +14,6 @@ const MenuGrid = () => {
     };
 
     const categories = [
-        // ... (remaining categories remain same as before)
         { id: 'platos', label: 'Platos Principales' },
         { id: 'entradas', label: 'Entradas' },
         { id: 'bebidas', label: 'Bebidas' },
@@ -289,8 +288,8 @@ const MenuGrid = () => {
                                 <button
                                     onClick={() => handleAddToCart(item)}
                                     className={`w-full font-display text-xl uppercase py-2 border-2 transition-all shadow-[4px_4px_0px_#666] hover:shadow-none hover:translate-x-1 hover:translate-y-1 mt-auto text-center block ${addedItemId === item.id
-                                            ? 'bg-brand-green text-white border-black'
-                                            : 'bg-brand-black text-brand-yellow border-transparent hover:bg-brand-yellow hover:text-black hover:border-black'
+                                        ? 'bg-brand-green text-white border-black'
+                                        : 'bg-brand-black text-brand-yellow border-transparent hover:bg-brand-yellow hover:text-black hover:border-black'
                                         }`}
                                 >
                                     {addedItemId === item.id ? '¡AGREGADO!' : '¡LO QUIERO!'}
