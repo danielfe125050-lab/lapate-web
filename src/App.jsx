@@ -18,47 +18,52 @@ const LoadingSpinner = () => (
   </div>
 );
 
+import { CartProvider } from './context/CartContext';
+import Cart from './components/Cart';
+
 function App() {
   return (
-    <div className="min-h-screen bg-brand-yellow font-body overflow-x-hidden">
-      <Navbar />
-      <Hero />
+    <CartProvider>
+      <div className="min-h-screen bg-brand-yellow font-body overflow-x-hidden">
+        <Navbar />
+        <Cart />
+        <Hero />
 
-      {/* Visual Separator with Marquee */}
-      <div className="relative z-30 -my-8 text-shadow-hard">
-        <Marquee text="TIENE HAMBRE? PARCE COMA RICO NO COMA CUENTO" rotation="rotate-2" />
+        {/* Visual Separator with Marquee */}
+        <div className="relative z-30 -my-8 text-shadow-hard">
+          <Marquee text="TIENE HAMBRE? PARCE COMA RICO NO COMA CUENTO" rotation="rotate-2" />
+        </div>
+
+        <Suspense fallback={<LoadingSpinner />}>
+          <MenuGrid />
+        </Suspense>
+
+        {/* Visual Separator with Marquee */}
+        <div className="relative z-30 -my-8">
+          <Marquee text="PEDIDOS AL WHATSAPP - DOMICILIOS RAPIDOS" rotation="-rotate-1" bg="bg-brand-red" textCol="text-brand-yellow" />
+        </div>
+
+        <Marquee text="★ COMIDA CON ALMA ★ PERRO SALCHICHA ★ LA PATE ★" direction="right" color="bg-brand-black" textColor="text-brand-yellow" rotate={-1} />
+
+        <Suspense fallback={<LoadingSpinner />}>
+          <AboutSection />
+        </Suspense>
+
+        <Marquee text="★ CLIENTES FELICES ★ SÁBADO DE PARCHE ★ LA MEJOR COMIDA ★" direction="right" color="bg-brand-red" textColor="text-white" rotate={2} />
+
+        <Suspense fallback={<LoadingSpinner />}>
+          <Testimonials />
+        </Suspense>
+
+        <Marquee text="📍 VISÍTANOS YA 📍 VISÍTANOS YA 📍 VISÍTANOS YA 📍" direction="left" color="bg-brand-green" textColor="text-brand-black" rotate={-1} />
+
+        <Suspense fallback={<LoadingSpinner />}>
+          <ContactSection />
+        </Suspense>
+
+        <FloatingWhatsApp />
       </div>
-
-      <Suspense fallback={<LoadingSpinner />}>
-        <MenuGrid />
-      </Suspense>
-
-      {/* Visual Separator with Marquee */}
-      <div className="relative z-30 -my-8">
-        <Marquee text="PEDIDOS AL WHATSAPP - DOMICILIOS RAPIDOS" rotation="-rotate-1" bg="bg-brand-red" textCol="text-brand-yellow" />
-      </div>
-
-      <Marquee text="★ COMIDA CON ALMA ★ PERRO SALCHICHA ★ LA PATE ★" direction="right" color="bg-brand-black" textColor="text-brand-yellow" rotate={-1} />
-
-      <Suspense fallback={<LoadingSpinner />}>
-        <AboutSection />
-      </Suspense>
-
-      <Marquee text="★ CLIENTES FELICES ★ SÁBADO DE PARCHE ★ LA MEJOR COMIDA ★" direction="right" color="bg-brand-red" textColor="text-white" rotate={2} />
-
-      <Suspense fallback={<LoadingSpinner />}>
-        <Testimonials />
-      </Suspense>
-
-      <Marquee text="📍 VISÍTANOS YA 📍 VISÍTANOS YA 📍 VISÍTANOS YA 📍" direction="left" color="bg-brand-green" textColor="text-brand-black" rotate={-1} />
-
-      <Suspense fallback={<LoadingSpinner />}>
-        <ContactSection />
-      </Suspense>
-
-      <FloatingWhatsApp />
-    </div>
-  )
+      )
 }
 
-export default App
+      export default App

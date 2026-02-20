@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
 import ScrollReveal from './ScrollReveal';
+import { useCart } from '../context/CartContext';
 
 const MenuGrid = () => {
     const [activeCategory, setActiveCategory] = useState('platos');
+    const { addToCart } = useCart();
+    const [addedItemId, setAddedItemId] = useState(null);
+
+    const handleAddToCart = (item) => {
+        addToCart(item);
+        setAddedItemId(item.id);
+        setTimeout(() => setAddedItemId(null), 1000);
+    };
 
     const categories = [
+        // ... (remaining categories remain same as before)
         { id: 'platos', label: 'Platos Principales' },
         { id: 'entradas', label: 'Entradas' },
         { id: 'bebidas', label: 'Bebidas' },
@@ -276,14 +286,15 @@ const MenuGrid = () => {
                                     {item.description}
                                 </p>
 
-                                <a
-                                    href={`https://wa.me/573027703386?text=${encodeURIComponent(`Hola La Pate! 🌭 Quiero pedir: ${item.name}`)}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-full bg-brand-black text-brand-yellow font-display text-xl uppercase py-2 hover:bg-brand-yellow hover:text-black border-2 border-transparent hover:border-black transition-colors shadow-[4px_4px_0px_#666] hover:shadow-none hover:translate-x-1 hover:translate-y-1 mt-auto text-center block"
+                                <button
+                                    onClick={() => handleAddToCart(item)}
+                                    className={`w-full font-display text-xl uppercase py-2 border-2 transition-all shadow-[4px_4px_0px_#666] hover:shadow-none hover:translate-x-1 hover:translate-y-1 mt-auto text-center block ${addedItemId === item.id
+                                            ? 'bg-brand-green text-white border-black'
+                                            : 'bg-brand-black text-brand-yellow border-transparent hover:bg-brand-yellow hover:text-black hover:border-black'
+                                        }`}
                                 >
-                                    ¡LO QUIERO!
-                                </a>
+                                    {addedItemId === item.id ? '¡AGREGADO!' : '¡LO QUIERO!'}
+                                </button>
                             </div>
                         </div>
                     </ScrollReveal>
